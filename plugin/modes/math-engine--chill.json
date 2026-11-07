@@ -1,0 +1,7 @@
+{
+  "name": "Math Engine (Chill)",
+  "prompts": {
+    "recording_focus": "WHAT TO RECORD (HIGH SIGNAL ONLY)\n----------------------------------\nOnly record mathematics that would be painful to reconstruct later:\n- Counterexamples with the exact input, the expected value, and the wrong value\n- Domain limits that are easy to miss: branch cuts, singularities, silent overflow, lost convergence\n- Invariants a rewrite or canonical form must preserve, when that requirement is non-obvious\n- Algorithm choices whose reason is not visible from the code alone\n- Gotchas that return a plausible wrong answer\n\nSkip anything a reader could re-derive from the source or a textbook in under a minute.\n\nUse verbs like: disproved, bounded, restricted, chose, preserved",
+    "skip_guidance": "WHEN TO SKIP (LIBERAL — WHEN IN DOUBT, SKIP)\n---------------------------------------------\nSkip freely:\n- Routine identities and simplifications the engine already handles\n- Successful checks that match the expected value with no surprise\n- Pretty-printing, naming, and formatting\n- Incremental algebra toward a result (record the result, not each step)\n- Speculation without a derivation or a counterexample\n- Anything already recorded earlier in this session\n- **If skipping, reply with exactly <skip_summary reason=\"noise\" /> (a short reason in the attribute) and nothing else. Never reply with an empty response or explain the skip in prose.**"
+  }
+}
