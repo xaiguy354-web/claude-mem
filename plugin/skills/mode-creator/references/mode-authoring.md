@@ -93,5 +93,6 @@ The parent supplies stable output-protocol fields that remain domain-neutral, in
 - `code--chill`: selective software memory.
 - `law-study`: case holdings, issue patterns, doctrine, professor frameworks, and exam concepts.
 - `email-investigation`: entities, relationships, evidence, anomalies, and conclusions.
+- `math-engine`: identities, algorithms, invariants, counterexamples, domain limits, verifications, and representation choices for a symbolic or numeric math engine. `math-engine--chill` keeps only the painful-to-reconstruct subset.
 
 Remix a close mode instead of duplicating it. Never overwrite a bundled ID.

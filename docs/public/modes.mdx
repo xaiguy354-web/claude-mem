@@ -140,6 +140,24 @@ A specialized mode for analyzing email dumps (e.g., FOIA releases, corporate arc
 - `anomaly`: Suspicious pattern or irregularity
 - `conclusion`: Investigative finding or determination
 
+### Math Engine Mode
+A specialized mode for symbolic and numeric math-engine work. It records identities, solver choices, invariants, counterexamples, domain limits, verifications, and representation decisions, and it skips routine arithmetic.
+
+**ID:** `math-engine`
+
+**Chill variant:** `math-engine--chill` records only results that would be painful to reconstruct: counterexamples, easy-to-miss domain limits, non-obvious invariants, and algorithm choices whose reason is not visible in the code.
+
+**Observation Types:**
+- `identity`: A proved formula, rewrite rule, or closed form
+- `algorithm`: A solver, rewrite strategy, or numeric method, with its reason
+- `invariant`: A property that must hold across rewrites or iterations
+- `counterexample`: A concrete input that falsifies a conjecture or exposes a wrong result
+- `domain-limit`: A branch cut, singularity, convergence bound, or other validity restriction
+- `verification`: A check against a known value, an independent derivation, or another system
+- `representation`: How an expression, number, or proof object is stored or canonicalized
+
+Activate with `CLAUDE_MEM_MODE=math-engine` or `CLAUDE_MEM_MODE=math-engine--chill`.
+
 ## Mode Inheritance
 
 The system supports inheritance using the `--` separator. For example, `code--es` means:
